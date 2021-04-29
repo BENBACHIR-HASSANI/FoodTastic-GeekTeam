@@ -42,8 +42,42 @@
 	<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-	
-	
+	<!--Style dropdown-->
+	<style>
+	.dropbtn {
+		background-color: #3b8a63;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	  }
+	  
+	  .dropbtn:hover, .dropbtn:focus {
+		background-color: #3b8a63;
+	  }
+	  
+	  .all-category {
+		position: relative;
+		display: inline-block;
+	  }
+	  
+	  .main-category {
+		display: none;
+		background-color: #f1f1f1;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  }
+	  
+	  .main-category a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+	  }
+	  
+	  .all-category a:hover {background-color: #ddd;}
+	  
+	  .show {display: block;}	
+	</style>
 </head>
 <body class="js">
 	
@@ -184,69 +218,74 @@
 		<div class="header-inner">
 			<div class="container">
 				<div class="cat-nav-head">
-					<div class="row">
+					<div class="row" style="height: 65px;">
 						<div class="col-lg-3">
 							<div class="all-category">
-								<h3 class="cat-heading">CATEGORIES<i class="fa fa-bars" aria-hidden="true" style="margin-left: 50px;"></i></h3>
-								<ul class="main-category">
-									<li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-										<ul class="sub-category">
-											<li><a href="#">Fruits & Vegetables</a></li>
-											<li><a href="#">Butcher's Shop</a></li>
-											<li><a href="#">Dairy Products</a></li>
-											<li><a href="#">Drinks</a></li>
-											<li><a href="#">Children</a></li>
-											<li><a href="#">Best selling</a></li>
-										</ul>
-									</li>
-									<li class="main-mega"><a href="#">best selling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-										<ul class="mega-menu">
-											<li class="single-menu">
-												<a href="#" class="title-link">Fruits & Vegetables</a>
-												<div class="image">
-													<img src="https://via.placeholder.com/225x155" alt="#">
-												</div>
-												<div class="inner-link">
-													<a href="#">Apple</a>
-													<a href="#">Banana</a>
-													<a href="#">Tomato</a>
-													<a href="#">Potatoes</a>
-												</div>
-											</li>
-											<li class="single-menu">
-												<a href="#" class="title-link">Dairy Products</a>
-												<div class="image">
-													<img src="https://via.placeholder.com/225x155" alt="#">
-												</div>
-												<div class="inner-link">
-													<a href="#">La vache qui rit</a>
-													<a href="#">Danette</a>
-													<a href="#">Perly yogurt</a>
-													<a href="#">Milk Jaouda</a>
-												</div>
-											</li>
-											<li class="single-menu">
-												<a href="#" class="title-link">Drinks</a>
-												<div class="image">
-													<img src="https://via.placeholder.com/225x155" alt="#">
-												</div>
-												<div class="inner-link">
-													<a href="#">Coca Cola</a>
-													<a href="#">Pepsi</a>
-													<a href="#">Al Boustane</a>
-													<a href="#">MARRAKECH</a>
-												</div>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Fruits & Vegetables</a></li>
-									<li><a href="#">Butcher's Shop</a></li>
-									<li><a href="#">Dairy Products</a></li>
-									<li><a href="#">Drinks</a></li>
-									<li><a href="#">Children</a></li>
+
+								<button onclick="myFunction()" class="dropbtn" style="width: 210px; height: 65px; background-color: #3b8a63; font-size: 20px;">
+									CATEGORY
+								</button>
+									<ul id="myDropdown" class="main-category"  >
+										<li><a href="#">New Arrivals <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+											<ul class="sub-category" style="margin-left: -27px;">
+												<li><a href="#">Fruits & Vegetables</a></li>
+												<li><a href="#">Butcher's Shop</a></li>
+												<li><a href="#">Dairy Products</a></li>
+												<li><a href="#">Drinks</a></li>
+												<li><a href="#">Children</a></li>
+												<li><a href="#">Best selling</a></li>
+											</ul>
+										</li>
+										<li class="main-mega"><a href="#">best selling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+											<ul class="mega-menu" style="margin-left: -27px;">
+												<li class="single-menu">
+													<a href="#" class="title-link">Fruits & Vegetables</a>
+													<div class="image">
+														<img src="https://via.placeholder.com/225x155" alt="#">
+													</div>
+													<div class="inner-link">
+														<a href="#">Apple</a>
+														<a href="#">Banana</a>
+														<a href="#">Tomato</a>
+														<a href="#">Potatoes</a>
+													</div>
+												</li>
+												<li class="single-menu">
+													<a href="#" class="title-link">Dairy Products</a>
+													<div class="image">
+														<img src="https://via.placeholder.com/225x155" alt="#">
+													</div>
+													<div class="inner-link">
+														<a href="#">La vache qui rit</a>
+														<a href="#">Danette</a>
+														<a href="#">Perly yogurt</a>
+														<a href="#">Milk Jaouda</a>
+													</div>
+												</li>
+												<li class="single-menu">
+													<a href="#" class="title-link">Drinks</a>
+													<div class="image">
+														<img src="https://via.placeholder.com/225x155" alt="#">
+													</div>
+													<div class="inner-link">
+														<a href="#">Coca Cola</a>
+														<a href="#">Pepsi</a>
+														<a href="#">Al Boustane</a>
+														<a href="#">MARRAKECH</a>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li><a href="#">Fruits & Vegetables</a></li>
+										<li><a href="#">Butcher's Shop</a></li>
+										<li><a href="#">Dairy Products</a></li>
+										<li><a href="#">Drinks</a></li>
+										<li><a href="#">Children</a></li>
 								</ul>
 							</div>
 						</div>
+
+						
 
 						<div class="col-lg-9 col-12">
 							<div class="menu-area">
@@ -256,7 +295,7 @@
 										<div class="nav-inner">	
 											<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="index.html">Home</a></li>
-													<li><a href="product-area section">Product</a></li>												
+													<li><a href="#Product">Product</a></li>												
 													<li><a href="#">Service</a></li>
 													<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
@@ -298,7 +337,11 @@
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
 										<div class="button">
-											<a href="#" class="btn" style="margin-top: 420px;">Shop Now!</a>
+											<a href="#Product" class="btn" style="border-radius: 10px; margin-top: 420px; box-shadow: 2px 2px 4px grey;">Shop Now!</a>
+										</div>
+										<div>
+											<a href="#"><img src="images/arrow-right.png" style="margin-left: 930px; margin-top:-600px; "></a>
+											<a href="#"><img src="images/arrow-left.png" style="margin-left: -500px; margin-top:-600px;"></a>
 										</div>
 									</div>
 								</div>
@@ -358,7 +401,8 @@
 	<!-- End Small Banner -->
 	
 	<!-- Start Product Area -->
-    <div class="product-area section">
+	
+    <div class="product-area section" id="Product" style="padding-top: 150px;">
             <div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -1734,7 +1778,7 @@
 						<div class="content">
 							<p>shoes women</p>
 							<h3>mid season <br> up to <span>70%</span></h3>
-							<a href="#" class="btn">Shop Now</a>
+							<a href="#" class="btn" >Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -2323,7 +2367,28 @@
 		</div>
 	</footer>
 	<!-- /End Footer Area -->
- 
+ <!--Script dropdown-->
+ <script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	  document.getElementById("myDropdown").classList.toggle("show");
+	}
+	
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+		var dropdowns = document.getElementsByClassName("main-category");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+	  }
+	}
+</script>
 	<!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
